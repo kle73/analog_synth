@@ -1,14 +1,16 @@
-find_package(raylib 3.0 REQUIRED) # Requires at least version 3.0
+find_package(raylib 3.0 REQUIRED) 
 
-set(CMAKE_C_STANDARD 11) # Requires C11 standard
+set(CMAKE_C_STANDARD 11) 
+
+add_subdirectory(external)
 
 add_subdirectory(channel)
 add_subdirectory(osc)
-add_subdirectory(fft)
-#target_include_directories(src PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+add_subdirectory(filter)
+add_subdirectory(amp)
 
 add_executable(${PROJECT_NAME} synth.c)
-target_link_libraries(${PROJECT_NAME} raylib fft channel osc)
+target_link_libraries(${PROJECT_NAME} raylib fft channel osc filter amp)
 
 # Checks if OSX and links appropriate frameworks (only required on MacOS)
 if (APPLE)
