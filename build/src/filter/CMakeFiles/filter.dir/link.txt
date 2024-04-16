@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libfilter.a CMakeFiles/filter.dir/filter.c.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libfilter.a

@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libosc.a CMakeFiles/osc.dir/osc.c.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libosc.a
